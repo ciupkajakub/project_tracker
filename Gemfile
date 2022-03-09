@@ -33,6 +33,15 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 
+# Design patterns
+gem "rails-patterns"
+
+# Authentication
+gem "devise"
+
+#debugging
+gem "pry"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -54,6 +63,14 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  # RSpec + FactoryBot as testing framework of choice
+  gem "factory_bot_rails"
+  gem "factory_trace"
+  gem "rspec-rails"
+
+  # Ensure uniform code style
+  gem "rubocop", "~> 1.16.0", require: false
 end
 
 group :development do
@@ -72,4 +89,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'super_diff'
 end
